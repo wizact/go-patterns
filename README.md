@@ -7,6 +7,8 @@ Golang patterns for learning purposes.
 - [Basic Channel with Loop Simplified](channels/basic-channel-with-loop-simplified/main.go)
 - [Basic Channel with Buffer](channels/basic-channel-with-buffer/main.go)
 - [Basic Channel with Multiple Goroutines](channels/basic-channel-multiple/main.go)
+- [Basic Channel bi-to-uni direction](channels/basic-channel-directions/main.go)
+- [Basic Channel anonymous goroutine](channels/basic-channel-anonymous-goroutine/main.go)
 
 
 
