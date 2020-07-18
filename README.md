@@ -9,6 +9,7 @@ Golang patterns for learning purposes.
 - [Basic Channel with Multiple Goroutines](channels/basic-channel-multiple/main.go)
 - [Basic Channel bi-to-uni direction](channels/basic-channel-directions/main.go)
 - [Basic Channel anonymous goroutine](channels/basic-channel-anonymous-goroutine/main.go)
+- [Basic Channel with type of channel](channels/basic-channel-of-channel-type/main.go)
 
 
 
