@@ -12,6 +12,7 @@ Golang patterns for learning purposes.
 - [Basic Channel with type of channel](channels/basic-channel-of-channel-type/main.go)
 - [Basic Channel with select](channels/basic-channel-with-select/main.go)
 - [Basic Channel with WaitGroup](channels/basic-channel-wait-group/main.go)
+- [Advanced Channel with Worker Pool](channels/advanced-channel-worker-Pool/main.go)
 
 
 
