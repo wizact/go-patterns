@@ -10,6 +10,8 @@ Golang patterns for learning purposes.
 - [Basic Channel bi-to-uni direction](channels/basic-channel-directions/main.go)
 - [Basic Channel anonymous goroutine](channels/basic-channel-anonymous-goroutine/main.go)
 - [Basic Channel with type of channel](channels/basic-channel-of-channel-type/main.go)
+- [Basic Channel with select](channels/basic-channel-with-select/main.go)
+- [Basic Channel with WaitGroup](channels/basic-channel-wait-group/main.go)
 
 
 
