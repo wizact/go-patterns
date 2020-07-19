@@ -23,7 +23,7 @@ func main() {
 	// main is blocked again waiting until goroutines write to the channels
 	fooVal, barVal := <-fooChan, <-barChan
 
-	fmt.Println(fooVal, barVal, fooVal + barVal)
+	fmt.Println(fooVal, barVal, fooVal+barVal)
 
 	fmt.Println("Main() stopped")
 }

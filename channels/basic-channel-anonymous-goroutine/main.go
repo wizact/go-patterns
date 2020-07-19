@@ -10,5 +10,5 @@ func main() {
 		fmt.Println(<-c)
 	}(c)
 
-	c<- 1
+	c <- 1
 }
