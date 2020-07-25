@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	pb "github.com/wizact/go-patterns/grpc/helloworld/helloworldpb"
+	pb "github.com/wizact/go-patterns/grpc/hello-world-example/helloworld/helloworldpb"
 	"google.golang.org/grpc"
 	"log"
 	"net"
@@ -13,12 +13,17 @@ const (
 )
 
 type server struct {
-	pb.UnimplementedGreeterServer
+	pb.GreeterServer
 }
 
 func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
 	log.Printf("Received: %v", in.GetName())
 	return &pb.HelloReply{Message: "Hello " + in.GetName()}, nil
+}
+
+func (s *server) SayHelloAgain(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
+	log.Printf("Received: %v", in.GetName())
+	return &pb.HelloReply{Message: "Hello again:" + in.GetName()}, nil
 }
 
 func main() {
