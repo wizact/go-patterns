@@ -12,6 +12,7 @@ Golang patterns for learning purposes.
 - [Basic Channel with type of channel](channels/basic-channel-of-channel-type/main.go)
 - [Basic Channel with select](channels/basic-channel-with-select/main.go)
 - [Basic Channel with WaitGroup](channels/basic-channel-wait-group/main.go)
+- [Basic Channel with ErrorGroup](channels/basic-error-group/main.go)
 - [Advanced Channel with Worker Pool](channels/advanced-channel-worker-Pool/main.go)
 - [Advanced Concurrency with Mutext](channels/advanced-channel-mutex/main.go)
 - [Advanced Concurrency Generator](channels/advanced-channel-generator/main.go)
