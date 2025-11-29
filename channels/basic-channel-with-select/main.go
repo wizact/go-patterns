@@ -27,15 +27,15 @@ func main() {
 
 	go foo(chan1)
 	go bar(chan2)
-
+	// loop:
 	for {
 		select {
 		case res := <-chan1:
 			fmt.Println("foo says", res)
 		case res := <-chan2:
 			fmt.Println("bar says", res)
-		default: // default makes all channels non-blocking
-			break
+			// default: // default makes all channels non-blocking
+			// break
 		}
 	}
 }
