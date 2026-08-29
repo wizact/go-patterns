@@ -28,6 +28,17 @@ func (l *TypedList[T]) Size() int {
 	return l.size
 }
 
+// Map returns a new list by applying f to every value in l.
+func (l *TypedList[T]) Map[U comparable](f func(T) U) *TypedList[U] {
+	newList := &TypedList[U]{}
+
+	for current := l.head; current != nil; current = current.next {
+		newVal := f(current.Value)
+		newList.Append(newVal)
+	}
+	return newList
+}
+
 // Append adds a new node with the given value to the end of the list.
 func (l *TypedList[T]) Append(value T) {
 	newNode := &Node[T]{Value: value}

@@ -134,3 +134,29 @@ func TestTypedListRemove(t *testing.T) {
 		t.Errorf("Expected to not find node with Value 2 after removal, got %v", notFound)
 	}
 }
+
+func TestTypedList_Map(t *testing.T) {
+	list := &TypedList[int]{}
+	list.Append(1)
+	list.Append(2)
+	list.Append(3)
+
+	f := func(x int) int {
+		return x * 2
+	}
+
+	mappedList := list.Map(f)
+
+	if mappedList.Size() != 3 {
+		t.Errorf("Expected mapped list size 3, got %d", mappedList.Size())
+	}
+
+	expectedValues := []int{2, 4, 6}
+	current := mappedList.head
+	for i, expected := range expectedValues {
+		if current == nil || current.Value != expected {
+			t.Errorf("Expected value %d at index %d, got %v", expected, i, current)
+		}
+		current = current.next
+	}
+}
