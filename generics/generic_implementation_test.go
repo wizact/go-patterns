@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestGenericImplementaion_ConcreteInstantiation(t *testing.T) {
+func TestGenericImplementation_ConcreteInstantiation(t *testing.T) {
 	expected := "Hello Amir"
 	p := P[string]{}
 	actual := p.M("Amir")

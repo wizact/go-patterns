@@ -73,23 +73,24 @@ func (l *TypedList[T]) First(n *Node[T]) *Node[T] {
 	return nil
 }
 
-// Last returns the last node in the list that matches the given node's value.
-func (l *TypedList[T]) Last(n *Node[T]) *Node[T] {
-	if l.tail == nil || n == nil {
+// Last returns the last node in the list whose value matches the supplied value.
+func (l *TypedList[T]) Last(v T) *Node[T] {
+	if l.tail == nil {
 		return nil
 	}
 
-	if l.tail.Value == n.Value {
+	if l.tail.Value == v {
 		return l.tail
 	}
-	current := l.head
-	for current != nil {
-		if current.Value == n.Value {
-			return current
+
+	var last *Node[T]
+
+	for current := l.head; current != nil; current = current.next {
+		if current.Value == v {
+			last = current
 		}
-		current = current.next
 	}
-	return nil
+	return last
 }
 
 // Remove removes the first occurrence of the given node from the list.

@@ -66,6 +66,56 @@ func TestTypedListFirstString(t *testing.T) {
 	}
 }
 
+func TestTypedListLast_DuplicateValue_ReturnsLastMatchingNode(t *testing.T) {
+	list := &TypedList[int]{}
+	list.Append(1)
+	list.Append(2)
+	list.Append(2)
+	list.Append(3)
+	expected := list.head.next.next
+
+	actual := list.Last(2)
+
+	if actual != expected {
+		t.Errorf("expected last matching node %p, got %p", expected, actual)
+	}
+}
+
+func TestTypedListLast_TailValue_ReturnsTail(t *testing.T) {
+	list := &TypedList[int]{}
+	list.Append(1)
+	list.Append(2)
+	list.Append(3)
+
+	actual := list.Last(3)
+
+	if actual != list.tail {
+		t.Errorf("expected tail node %p, got %p", list.tail, actual)
+	}
+}
+
+func TestTypedListLast_MissingValue_ReturnsNil(t *testing.T) {
+	list := &TypedList[int]{}
+	list.Append(1)
+	list.Append(2)
+
+	actual := list.Last(3)
+
+	if actual != nil {
+		t.Errorf("expected nil, got %p", actual)
+	}
+}
+
+func TestTypedListLast_EmptyList_ReturnsNil(t *testing.T) {
+	list := &TypedList[int]{}
+
+	actual := list.Last(1)
+
+	if actual != nil {
+		t.Errorf("expected nil, got %p", actual)
+	}
+}
+
 func TestTypedListRemove(t *testing.T) {
 	list := &TypedList[int]{}
 	list.Append(1)
