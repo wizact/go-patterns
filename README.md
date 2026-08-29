@@ -27,6 +27,9 @@ Golang patterns for learning purposes.
 - [Generic Interface Implementation](generics/generic_implementation.go)
 - [Typed Linked List with a Generic Map Method](generics/typed_list.go)
 
+## Embedding
+- [Promoted Field and Method](embedding/main.go)
+
 ## Struct Builders
 - [Fluent Builder](structbuilder/fluent/builder.go)
 - [Functional Options](structbuilder/functionaloptions/options.go)
