@@ -1,6 +1,9 @@
 # Go Patterns
 Golang patterns for learning purposes.
 
+## Algorithms
+- [Binary Search](algo/binary-search/main.go)
+
 ## Channels
 - [Basic Channel](channels/basic-channel/main.go)
 - [Basic Channel with Loop](channels/basic-channel-with-loop/main.go)
@@ -17,6 +20,16 @@ Golang patterns for learning purposes.
 - [Advanced Concurrency with Mutext](channels/advanced-channel-mutex/main.go)
 - [Advanced Concurrency Generator](channels/advanced-channel-generator/main.go)
 
+## Encoding
+- [Protocol Buffers](encoding/protobuf/main.go)
+
+## Generics
+- [Generic Interface Implementation](generics/generic_implementation.go)
+- [Typed Linked List with a Generic Map Method](generics/typed_list.go)
+
+## gRPC
+- [Hello World Client](grpc/hello-world-example/client/main.go)
+- [Hello World Server](grpc/hello-world-example/server/main.go)
 
 
 #### References
