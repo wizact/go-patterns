@@ -35,6 +35,9 @@ Golang patterns for learning purposes.
 - [Hello World Client](grpc/hello-world-example/client/main.go)
 - [Hello World Server](grpc/hello-world-example/server/main.go)
 
+## Panic and Recovery
+- [Flag-Triggered Panic Recovery](panic/recovery.go)
+
 
 #### References
 - [Google I/O 2012 - Go Concurrency Patterns](https://www.youtube.com/watch?v=f6kdp27TYZs)
