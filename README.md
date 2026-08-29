@@ -27,6 +27,10 @@ Golang patterns for learning purposes.
 - [Generic Interface Implementation](generics/generic_implementation.go)
 - [Typed Linked List with a Generic Map Method](generics/typed_list.go)
 
+## Struct Builders
+- [Fluent Builder](structbuilder/fluent/builder.go)
+- [Functional Options](structbuilder/functionaloptions/options.go)
+
 ## gRPC
 - [Hello World Client](grpc/hello-world-example/client/main.go)
 - [Hello World Server](grpc/hello-world-example/server/main.go)
